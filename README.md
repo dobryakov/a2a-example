@@ -29,4 +29,5 @@
 
 - Манифест агента: `.well-known/agents/{agent_id}.json`.
 - Шаблон роли **Data Analyst**: [.well-known/agents/data_analyst.json](.well-known/agents/data_analyst.json).
+- Шаблон роли **Product Manager**: [.well-known/agents/product_manager.json](.well-known/agents/product_manager.json).
 - Корневые пути задаются в `config/a2a-environment.json`.

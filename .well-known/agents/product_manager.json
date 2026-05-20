@@ -1,0 +1,17 @@
+{
+  "agent_id": "product_manager",
+  "role": "ProductManager",
+  "capabilities": [
+    "requirements_synthesis",
+    "user_story_drafting",
+    "acceptance_criteria_authoring",
+    "backlog_prioritization_hints",
+    "prd_outline_and_scope",
+    "stakeholder_update_summaries",
+    "metric_and_okr_alignment",
+    "risk_and_dependency_surfacing"
+  ],
+  "version": "1.0",
+  "inbox_path": "inbox/",
+  "description": "Продуктовый контур: постановка целей фичь, пользовательские сценарии, критерии приёмки, приоритеты backlog и синтез требований для команды разработки."
+}
