@@ -1,0 +1,33 @@
+{
+  "jsonrpc": "2.0",
+  "method": "content.social_post.refine",
+  "params": {
+    "comment": "Доработка поста относительно parent_id 01f4c414-3938-4b5e-8a75-d791edc941fc: сделать текст заметно длиннее, плотнее и ориентированным на техническую аудиторию (инженеры платформы, архитекторы ИИ-оркестрации, DevOps). Добавить богатые технические примеры: структура JSON-RPC запроса (поля), пути inbox/processing/outbox/archive, паттерн res_{id}.json и опционального конверта с metadata.json, атомарный rename при захвате, сообщение коммита Processed <id>, сценарий итерации с parent_id. Тон: точный, без маркетинговой воды; можно один короткий блок кода или псевдо-JSON как иллюстрация, если уместно для платформы.",
+    "change_request": {
+      "audience": "technical",
+      "goals": [
+        "substantially_longer_than_parent",
+        "concrete_protocol_and_filesystem_examples",
+        "assume_reader_knows_git_and_json"
+      ],
+      "preserve": [
+        "core_message_A2A_as_file_bus_on_git",
+        "jsonrpc_2_0_framing"
+      ],
+      "source_artifacts": {
+        "parent_envelope_dir": "outbox/01f4c414-3938-4b5e-8a75-d791edc941fc/",
+        "primary_file": "social_post.md"
+      }
+    },
+    "expected_artifacts": {
+      "envelope": true,
+      "files_hint": ["social_post.md"],
+      "summary_for_metadata": "Расширенная техническая версия поста про A2A (итерация над выдачей parent_id)."
+    },
+    "raw_prompt": "Перепиши и расширь social_post.md из конверта предка: длиннее, с богатыми техническими примерами (поля запроса, пути, res_ + конверт, атомарный захват, Git-коммит, при желании parent_id/итерации). Аудитория — инженеры. Итог — новый markdown в конверте этой задачи по SYSTEM_INSTRUCTIONS §2.3."
+  },
+  "id": "9680b0ff-8174-4a81-87f7-c31af1e1fe6a",
+  "parent_id": "01f4c414-3938-4b5e-8a75-d791edc941fc",
+  "sender_id": "human",
+  "timestamp": "2026-05-20T18:00:00.000Z"
+}

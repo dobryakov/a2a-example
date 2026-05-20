@@ -1,0 +1,14 @@
+{
+  "jsonrpc": "2.0",
+  "id": "9680b0ff-8174-4a81-87f7-c31af1e1fe6a",
+  "processed_by": "product_manager",
+  "timestamp": "2026-05-20T19:05:00.000Z",
+  "summary": "Расширенная техническая версия поста про A2A (итерация над выдачей parent_id).",
+  "files": [
+    {
+      "name": "social_post.md",
+      "type": "text/markdown",
+      "description": "Технический пост про файловую шину A2A с примерами JSON-RPC, путей репозитория и политики итераций"
+    }
+  ]
+}
