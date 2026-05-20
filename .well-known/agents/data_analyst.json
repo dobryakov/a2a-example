@@ -1,0 +1,15 @@
+{
+  "agent_id": "data_analyst",
+  "role": "DataAnalyst",
+  "capabilities": [
+    "data_profiling",
+    "sql_analysis",
+    "metric_definition",
+    "visualization_spec",
+    "report_summarization",
+    "csv_parquet_contract_validation"
+  ],
+  "version": "1.0",
+  "inbox_path": "inbox/",
+  "description": "Аналитические запросы: профилирование данных, описательная статистика, спецификация метрик и отчётов."
+}

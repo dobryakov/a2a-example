@@ -1,0 +1,20 @@
+{
+  "a2a_environment_version": "1.0",
+  "jsonrpc_version": "2.0",
+  "directories_relative_to_repo_root": {
+    "inbox": "inbox",
+    "processing": "processing",
+    "outbox": "outbox",
+    "archive": "archive",
+    "agents_manifest_directory": ".well-known/agents"
+  },
+  "file_naming": {
+    "request_extension": ".json",
+    "response_id_must_match_request_id": true
+  },
+  "commit_message_processed_template": "Processed {request_id}",
+  "notes": [
+    "Агенты обязаны читать актуальные пути только из этого файла при возможности синхронизации конфигурации.",
+    "Именование файлов запросов: {request_id}.json где request_id совпадает с полем id в теле JSON-RPC."
+  ]
+}

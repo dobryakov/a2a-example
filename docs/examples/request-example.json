@@ -1,0 +1,13 @@
+{
+  "$schema_comment": "Иллюстративный файл; удалить перед продакшеном или заменить реальными вызовами.",
+  "jsonrpc": "2.0",
+  "method": "analytics.profile_dataset",
+  "params": {
+    "dataset_uri": "s3://example-bucket/metrics/sample.parquet",
+    "columns_hint": ["user_id", "event_ts"],
+    "output_format": "summary_json"
+  },
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "sender_id": "orchestrator_main",
+  "timestamp": "2026-05-20T12:00:00.000Z"
+}
