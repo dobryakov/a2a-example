@@ -20,6 +20,11 @@
 2. **[docs/ATOMIC_CAPTURE.md](docs/ATOMIC_CAPTURE.md)** — модель атомарного захвата задачи и исключение коллизий.
 3. **[docs/VERSIONING.md](docs/VERSIONING.md)** — как Git фиксирует снимки состояния очередей и сообщений.
 
+## Для помощников ИИ
+
+- **[CLAUDE.md](CLAUDE.md)** — краткая навигация по инструкциям (таблица ссылок).
+- Правило Cursor: [.cursor/rules/a2a-file-bus.mdc](.cursor/rules/a2a-file-bus.mdc) (`alwaysApply`).
+
 ## Быстрый старт
 
 - Манифест агента: `.well-known/agents/{agent_id}.json`.
