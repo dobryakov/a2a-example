@@ -1,0 +1,24 @@
+{
+  "jsonrpc": "2.0",
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "processed_by": "data_analyst",
+  "timestamp": "2026-05-20T12:00:00.000Z",
+  "summary": "Профилирование выборки: сводная статистика, таблица долей NULL и график распределения.",
+  "files": [
+    {
+      "name": "summary.md",
+      "type": "text/markdown",
+      "description": "Краткий отчёт по метрикам и выводам"
+    },
+    {
+      "name": "null_rates.csv",
+      "type": "text/csv",
+      "description": "Доли пропусков по колонкам"
+    },
+    {
+      "name": "distribution.png",
+      "type": "image/png",
+      "description": "Гистограмма по целевой метрике"
+    }
+  ]
+}

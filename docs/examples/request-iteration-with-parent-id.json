@@ -1,0 +1,21 @@
+{
+  "$schema_comment": "Пример доработки: файл в очереди inbox/{новый_uuid}.json; связь с предком только через parent_id (без суффиксов v2 в id).",
+  "jsonrpc": "2.0",
+  "method": "product.refine_deliverable",
+  "params": {
+    "comment": "Доработка по результату задачи req-98765: добавить раздел «Риски и ограничения», уточнить метрику успеха в acceptance criteria, не менять уже согласованные user stories.",
+    "change_request": {
+      "preserve": ["user_stories", "mvp_scope"],
+      "add_sections": ["risks_and_constraints"],
+      "revise": ["acceptance_criteria.success_metric"]
+    },
+    "expected_artifacts": {
+      "envelope": true,
+      "files_hint": ["acceptance-criteria.md", "risks.md"]
+    }
+  },
+  "id": "2ac9cc5a-9a01-49e9-9d50-6399ae56d875",
+  "parent_id": "req-98765",
+  "sender_id": "human_pm",
+  "timestamp": "2026-05-20T14:30:00.000Z"
+}
