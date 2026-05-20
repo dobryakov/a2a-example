@@ -1,0 +1,14 @@
+{
+  "jsonrpc": "2.0",
+  "id": "01f4c414-3938-4b5e-8a75-d791edc941fc",
+  "processed_by": "product_manager",
+  "timestamp": "2026-05-20T12:30:00.000Z",
+  "summary": "Черновик поста на русском о репозитории A2A как файловой шине на Git (JSON-RPC 2.0), оформлен как markdown для публикации в соцсетях.",
+  "files": [
+    {
+      "name": "social_post.md",
+      "type": "text/markdown",
+      "description": "Текст поста для соцсети про файловую шину A2A и обмен через inbox/outbox и Git"
+    }
+  ]
+}

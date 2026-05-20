@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "method_executed": "task.enqueue",
+    "title": "Пост в соцсети о проекте A2A (RU)",
+    "status": "completed",
+    "language": "ru",
+    "format": "social_media_post",
+    "envelope": {
+      "path": "outbox/01f4c414-3938-4b5e-8a75-d791edc941fc/",
+      "artifact_files": ["social_post.md"],
+      "metadata": "metadata.json"
+    },
+    "summary_ru": "Подготовлен текст поста про A2A как файловую шину на Git с JSON-RPC 2.0; текст в конверте в social_post.md."
+  },
+  "error": null,
+  "id": "01f4c414-3938-4b5e-8a75-d791edc941fc",
+  "processed_by": "product_manager"
+}

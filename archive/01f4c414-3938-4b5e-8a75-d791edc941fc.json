@@ -1,0 +1,25 @@
+{
+  "jsonrpc": "2.0",
+  "method": "task.enqueue",
+  "params": {
+    "title": "Пост в соцсети о проекте A2A (RU)",
+    "raw_prompt": "/a2a-task-from-text создай текст поста в соцсети на русском языке об этом проекте. Оформи результат как артефакт в конверте.",
+    "deliverable": {
+      "language": "ru",
+      "format": "social_media_post",
+      "packaging": "outbox_envelope_with_metadata"
+    },
+    "outbox": {
+      "envelope_required": true,
+      "instruction_ru": "Исполнитель: кроме обязательного outbox/res_{id}.json, создать конверт outbox/{id}/ с текстом поста отдельным файлом и metadata.json по docs/SYSTEM_INSTRUCTIONS.md (паттерн конверта, подраздел 2.3)."
+    },
+    "constraints": [
+      "Текст на русском.",
+      "Пост про репозиторий A2A как файловую шину на Git (JSON-RPC 2.0).",
+      "Итог — артефакт внутри каталога-конверта outbox/{id}/ с metadata.json."
+    ]
+  },
+  "id": "01f4c414-3938-4b5e-8a75-d791edc941fc",
+  "sender_id": "human",
+  "timestamp": "2026-05-20T07:50:41.000Z"
+}
