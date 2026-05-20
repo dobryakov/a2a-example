@@ -1,36 +1,36 @@
-# A2A: файловая шина на Git (JSON-RPC 2.0)
+# A2A: Git-based file bus (JSON-RPC 2.0)
 
-Репозиторий задаёт среду обмена сообщениями **Agent-to-Agent** через файловую систему и **версионирование состояния через Git**.
+This repository defines an **Agent-to-Agent** messaging environment through the file system and **state versioning via Git**.
 
-## Структура
+## Layout
 
-| Путь | Назначение |
-|------|----------------|
-| `inbox/` | Очередь входящих JSON-RPC запросов (статус **PENDING**) |
-| `processing/` | Активные задачи (**LOCKED** — захваченные конкретным агентом) |
-| `outbox/` | Готовые ответы (**COMPLETED**): **всегда** `res_{id}.*` с JSON-RPC телом §2.2; **опционально** каталог `{id}/` с вложениями и `metadata.json` (см. `docs/SYSTEM_INSTRUCTIONS.md` §2.3) |
-| `archive/` | Архив обработанных запросов |
-| `.well-known/agents/` | Манифесты агентов |
-| `config/` | Конфигурация окружения (пути, версия протокола) |
-| `docs/` | Спецификации и системные инструкции |
+| Path | Purpose |
+|------|---------|
+| `inbox/` | Incoming JSON-RPC requests queue (**PENDING**) |
+| `processing/` | Active tasks (**LOCKED** — claimed by a specific agent) |
+| `outbox/` | Completed responses (**COMPLETED**): **always** `res_{id}.*` with the JSON-RPC body (section 2.2); **optionally** a `{id}/` directory with attachments and `metadata.json` (see `docs/SYSTEM_INSTRUCTIONS.md` section 2.3) |
+| `archive/` | Archive of processed requests |
+| `.well-known/agents/` | Agent manifests |
+| `config/` | Environment configuration (paths, protocol version) |
+| `docs/` | Specifications and system instructions |
 
-## Документы для агентов
+## Documents for agents
 
-1. **[PROTOCOL.md](PROTOCOL.md)** — короткий обзор протокола и ссылка на **Iteration Policy** (итерации и `parent_id`).
-2. **[docs/SYSTEM_INSTRUCTIONS.md](docs/SYSTEM_INSTRUCTIONS.md)** — формальные системные инструкции (рабочий цикл, инварианты, переходы состояний, **паттерн Конверта** для `outbox/`, §2.3; **итерации — §7**). Примеры выдачи: **[docs/examples/README.md](docs/examples/README.md)**.
-3. **[docs/ATOMIC_CAPTURE.md](docs/ATOMIC_CAPTURE.md)** — модель атомарного захвата задачи и исключение коллизий.
-4. **[docs/VERSIONING.md](docs/VERSIONING.md)** — как Git фиксирует снимки состояния очередей и сообщений.
+1. **[PROTOCOL.md](PROTOCOL.md)** — short protocol overview and link to **Iteration Policy** (iterations and `parent_id`).
+2. **[docs/SYSTEM_INSTRUCTIONS.md](docs/SYSTEM_INSTRUCTIONS.md)** — formal system instructions (workflow, invariants, state transitions, **Envelope pattern** for `outbox/`, section 2.3; **iterations — section 7**). Response examples: **[docs/examples/README.md](docs/examples/README.md)**.
+3. **[docs/ATOMIC_CAPTURE.md](docs/ATOMIC_CAPTURE.md)** — atomic task capture model and collision avoidance.
+4. **[docs/VERSIONING.md](docs/VERSIONING.md)** — how Git records snapshots of queue and message state.
 
-## Для помощников ИИ
+## For AI assistants
 
-- **[CLAUDE.md](CLAUDE.md)** — краткая навигация по инструкциям (таблица ссылок).
-- Правило Cursor: [.cursor/rules/a2a-file-bus.mdc](.cursor/rules/a2a-file-bus.mdc) (`alwaysApply`).
-- Claude-скилл «текст → `inbox/`»: [.claude/skills/a2a-task-from-text/SKILL.md](.claude/skills/a2a-task-from-text/SKILL.md).
-- Claude-скилл исполнителя (`inbox/` → ответ): [.claude/skills/a2a-inbox-worker/SKILL.md](.claude/skills/a2a-inbox-worker/SKILL.md).
+- **[CLAUDE.md](CLAUDE.md)** — short navigation over instructions (link table).
+- Cursor rule: [.cursor/rules/a2a-file-bus.mdc](.cursor/rules/a2a-file-bus.mdc) (`alwaysApply`).
+- Claude skill “text → `inbox/`”: [.claude/skills/a2a-task-from-text/SKILL.md](.claude/skills/a2a-task-from-text/SKILL.md).
+- Claude worker skill (`inbox/` → response): [.claude/skills/a2a-inbox-worker/SKILL.md](.claude/skills/a2a-inbox-worker/SKILL.md).
 
-## Быстрый старт
+## Quick start
 
-- Манифест агента: `.well-known/agents/{agent_id}.json`.
-- Шаблон роли **Data Analyst**: [.well-known/agents/data_analyst.json](.well-known/agents/data_analyst.json).
-- Шаблон роли **Product Manager**: [.well-known/agents/product_manager.json](.well-known/agents/product_manager.json).
-- Корневые пути задаются в `config/a2a-environment.json`.
+- Agent manifest: `.well-known/agents/{agent_id}.json`.
+- **Data Analyst** role template: [.well-known/agents/data_analyst.json](.well-known/agents/data_analyst.json).
+- **Product Manager** role template: [.well-known/agents/product_manager.json](.well-known/agents/product_manager.json).
+- Root paths are set in `config/a2a-environment.json`.
