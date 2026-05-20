@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "method_executed": "product.deliverables.artifact_bundle",
+    "summary": "Три артефакта постановки вынесены в конверт; указатели для подписчика ниже.",
+    "envelope_relative_path": "870cb8c7-ade2-4949-b076-bd014111dbef",
+    "artifact_manifest_ref": "870cb8c7-ade2-4949-b076-bd014111dbef/metadata.json",
+    "artifact_files": [
+      "870cb8c7-ade2-4949-b076-bd014111dbef/prd-outline.md",
+      "870cb8c7-ade2-4949-b076-bd014111dbef/user-stories.md",
+      "870cb8c7-ade2-4949-b076-bd014111dbef/acceptance-criteria.md"
+    ],
+    "thread_hint_echo": "demo_envelope_artifacts_q2",
+    "completed_at": "2026-05-20T07:48:03.076Z"
+  },
+  "error": null,
+  "id": "870cb8c7-ade2-4949-b076-bd014111dbef",
+  "processed_by": "product_manager"
+}

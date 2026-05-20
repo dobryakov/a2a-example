@@ -1,0 +1,45 @@
+{
+  "jsonrpc": "2.0",
+  "method": "product.deliverables.artifact_bundle",
+  "params": {
+    "title": "Тест: пакет артефактов для промо-страницы Pro (конверт)",
+    "freeform": "Подготовь постановку для команды разработки по промо-странице тарифа Pro. Машинный JSON-RPC ответ должен содержать только краткую сводку и ссылки на файлы; полные материалы вынеси в дополнительные артефакты конверта.",
+    "business_goal": "Проверить сценарий A2A с обязательным res_*.json и опциональным конвертом outbox/{id}/ с metadata.json.",
+    "audience_hint": "Владельцы малого бизнеса, трафик из контекстной рекламы Q2.",
+    "required_artifacts": [
+      {
+        "name": "prd-outline.md",
+        "type": "text/markdown",
+        "description": "Черновик PRD: цели, scope, out-of-scope, метрики успеха, риски"
+      },
+      {
+        "name": "user-stories.md",
+        "type": "text/markdown",
+        "description": "5–8 user stories в формате «Как … я хочу … чтобы …» с приоритетом MoSCoW"
+      },
+      {
+        "name": "acceptance-criteria.md",
+        "type": "text/markdown",
+        "description": "Чеклист критериев приёмки для hero, таблицы тарифа, FAQ и primary CTA"
+      }
+    ],
+    "constraints": [
+      "res_{id}.json — только сводка и указатели на файлы конверта, без дублирования полного текста артефактов",
+      "конверт обязателен: все три markdown-файла + metadata.json по §2.3.3",
+      "русский язык; без секретов и реальных URL с credentials"
+    ],
+    "must_have_blocks": [
+      "герой с одним primary CTA на trial Pro",
+      "таблица «что входит»",
+      "FAQ 5–7 пунктов"
+    ],
+    "open_questions_for_product": [
+      "Primary KPI: регистрация или оплата после trial?",
+      "Нужен ли A/B оффера в первой итерации?"
+    ],
+    "thread_hint": "demo_envelope_artifacts_q2"
+  },
+  "id": "870cb8c7-ade2-4949-b076-bd014111dbef",
+  "sender_id": "human",
+  "timestamp": "2026-05-20T07:46:49.351Z"
+}

@@ -1,0 +1,24 @@
+{
+  "jsonrpc": "2.0",
+  "id": "870cb8c7-ade2-4949-b076-bd014111dbef",
+  "processed_by": "product_manager",
+  "timestamp": "2026-05-20T07:47:52.838Z",
+  "summary": "Пакет постановки: PRD-контур, user stories (MoSCoW), критерии приёмки для промо Pro в трёх markdown-файлах конверта.",
+  "files": [
+    {
+      "name": "prd-outline.md",
+      "type": "text/markdown",
+      "description": "Черновик PRD: цели, scope, out-of-scope, метрики успеха, риски"
+    },
+    {
+      "name": "user-stories.md",
+      "type": "text/markdown",
+      "description": "User stories с приоритетами MoSCoW"
+    },
+    {
+      "name": "acceptance-criteria.md",
+      "type": "text/markdown",
+      "description": "Чеклист приёмки для hero, таблицы, FAQ и CTA"
+    }
+  ]
+}
