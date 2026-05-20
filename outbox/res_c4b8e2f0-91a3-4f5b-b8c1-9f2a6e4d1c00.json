@@ -1,0 +1,70 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "method_executed": "product.promo_page.scope_discussion",
+    "scope_summary": "Лендинг кампании Q2 под тариф Pro для малого бизнеса: один основной поток конверсии из контекстной рекламы, без изменений ядра продукта и без новых платёжных методов.",
+    "default_primary_kpi": {
+      "recommendation": "trial_to_paid_conversion_rate",
+      "rationale": "Цель формулируется как рост оплат после триала; регистрация как отдельный secondary KPI (воронка качества трафика), чтобы не размывать главный сигнал."
+    },
+    "ab_test_in_first_iteration": {
+      "recommendation": false,
+      "rationale": "В первом черновике за 5 рабочих дней фиксируем одну контрольную версию оффера и измеряем baseline; A/B оффера — следующий инкремент после стабильной аналитики."
+    },
+    "default_conversion_flow": {
+      "choice": "trial_checkout_primary",
+      "copy_for_hero_cta": "Начать Pro — 14 дней бесплатно",
+      "notes": "Один главный CTA ведёт в стандартный поток trial/оплаты существующего продукта; лид-форма только как вторичный путь (футер/модалка), если политика данных это допускает."
+    },
+    "page_outline": [
+      {
+        "block": "hero",
+        "must_haves": [
+          "оффер Pro для малого бизнеса",
+          "один primary CTA",
+          "доверие: логотипы/цифры при наличии"
+        ]
+      },
+      {
+        "block": "value_and_included",
+        "must_haves": [
+          "таблица «что входит» в Pro vs ориентир baseline"
+        ]
+      },
+      {
+        "block": "social_proof",
+        "must_haves": [
+          "1–2 кейса или цитаты под сегмент МСБ"
+        ]
+      },
+      {
+        "block": "faq",
+        "must_haves": [
+          "5–7 ответов: тариф, пробный период, оплата без новых методов, смена плана, поддержка, данные/безопасность"
+        ]
+      },
+      {
+        "block": "final_cta",
+        "must_haves": [
+          "повтор primary CTA + краткое напоминание условий trial"
+        ]
+      }
+    ],
+    "acceptance_criteria_draft": [
+      "На десктопе и мобиле один видимый primary CTA above the fold без конкурирующих равнозначных действий.",
+      "Таблица включений Pro опубликована и согласована с актуальным прайсом (источник правды — продукт/биллинг).",
+        "FAQ покрывает trial, оплату существующими методами, ограничения compliance по платежам.",
+      "Аналитика: события на клик primary CTA и successful trial start / checkout step без PII в лишних полях."
+    ],
+    "risks_and_dependencies": [
+      "Требуется явное решение analytics/CRM: UTM и атрибуция кампании Q2.",
+      "Согласование формулировок оффера с legal/compliance при упоминании trial и автопродления.",
+      "Англоязычная версия — out of scope для первого черновика (post-MVP)."
+    ],
+    "open_questions_status": "Два вопроса из запроса закрыты рекомендациями выше; финальное утверждение KPI и план A/B — на короткой синхронизации с владельцем кампании.",
+    "thread_hint_echo": "demo_promo_pro_q2"
+  },
+  "error": null,
+  "id": "c4b8e2f0-91a3-4f5b-b8c1-9f2a6e4d1c00",
+  "processed_by": "product_manager"
+}
